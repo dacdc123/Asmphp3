@@ -13,13 +13,15 @@ class HomeController extends Controller
             ->get();
         $books = DB::table('books')
             ->orderBy('price', 'desc',)
-            ->limit(10)
+            ->limit(3)
             ->get();
-        $booked = DB::table('books')
-            ->orderBy('price', 'asc')
-            ->limit(10)
-            ->get();
-        return view('home', compact('books', 'booked', 'category'));
+            // dd($category);
+
+        // $booked = DB::table('books')
+        //     ->orderBy('price', 'asc')
+        //     ->limit(10)
+        //     ->get();
+        return view('client.index', compact('books', 'category'));
     }
 
 }

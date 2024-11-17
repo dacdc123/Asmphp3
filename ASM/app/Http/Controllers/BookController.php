@@ -14,8 +14,8 @@ class BookController extends Controller
             return redirect(404);
         }
         $category = DB::table('categories')
-        ->get();
-        return view('detail', compact('book','category'));
+            ->get();
+        return view('client.detail', compact('book', 'category'));
     }
 
     // hiển thị theo danh mục 
@@ -26,9 +26,9 @@ class BookController extends Controller
             ->select('books.*', 'title')
             ->where('category_id', $id)
             ->latest('id')
-            ->paginate(10);
+            ->paginate(4);
         $category = DB::table('categories')
             ->get();
-        return view('books', compact('books','category'));
+        return view('client.index', compact('books', 'category'));
     }
 }

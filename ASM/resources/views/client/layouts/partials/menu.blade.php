@@ -8,8 +8,11 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link" href="/" role="button" data-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="false">
-                        Trang chủ 
+                        Trang chủ
                     </a>
+
+
+
                     {{-- <div class="dropdown-menu">
                         <a class="dropdown-item" href="index-full.html">Homepage Full Width</a>
 
@@ -37,16 +40,21 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="false">
-                        Danh sách  <i class="ti-angle-down ml-1"></i>
+                        Danh sách <i class="ti-angle-down ml-1"></i>
                     </a>
-                    <div class="dropdown-menu">
+                    @foreach ($category as $cate)
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="{{ '/category/' . $cate->id }}"> {{$cate->name}}</a>
 
-                        <a class="dropdown-item" href="about-me.html">About Me</a>
-
-                        <a class="dropdown-item" href="about-us.html">About Us</a>
-
-                    </div>
+                        </div>
+                    @endforeach
                 </li>
+                {{-- @foreach ($category as $cate)
+                <li class="nav-item">
+                    <a class="dropdown-item" href="{{ '/category/' . $cate->id }}">{{ $cate->name }}</a>
+                </li>
+            @endforeach --}}
+
 
                 <li class="nav-item">
                     <a class="nav-link" href="contact.html">Contact</a>
