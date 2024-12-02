@@ -1,12 +1,7 @@
-<footer class="site-footer">
-    <div class="footer-inner bg-white">
-        <div class="row">
-            <div class="col-sm-6">
-                Copyright &copy; 2018 Ela Admin
-            </div>
-            <div class="col-sm-6 text-right">
-                Designed by <a href="https://colorlib.com">Colorlib</a>
-            </div>
+<footer class="sticky-footer bg-white">
+    <div class="container my-auto">
+        <div class="copyright text-center my-auto">
+            <span>Copyright &copy; Your Website 2021</span>
         </div>
     </div>
 </footer>

@@ -19,6 +19,9 @@ Route::get('/', function () {
     return view('client.index');
 });
 
+Route::get('/admin ', function () {
+    return view('admin.index');
+});
 
 Route::get('/', [HomeController::class, 'max'])->name('home');
 
